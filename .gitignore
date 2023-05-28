@@ -171,3 +171,7 @@ cython_debug/
 pyvenv.cfg
 .venv
 pip-selfcheck.json
+
+# Django
+.my_pgpass
+.pg_service.conf
