@@ -6,6 +6,9 @@ class CseEndeavour(models.Model):
 
     def __str__(self):
         return self.label
+    
+    class Meta:
+        ordering = ['label']
 
 
 class ComputerScienceEducatorsPost(models.Model):
@@ -30,3 +33,6 @@ class ComputerScienceEducatorsPost(models.Model):
     
     def __str__(self):
         return f'${self.text[:20]}...'
+
+    class Meta:
+        ordering = ['stack_exchange_id']
