@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'graphene_django',
     'red.apps.RedConfig',
     'rest_framework',
 ]
@@ -126,3 +127,9 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# Graphne settings
+
+GRAPHENE = {
+    'SCHEMA': 'django_root.schema.schema'
+}

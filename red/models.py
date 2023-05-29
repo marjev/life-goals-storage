@@ -29,10 +29,10 @@ class ComputerScienceEducatorsPost(models.Model):
 
     @property
     def unique_id(self):
-        return f'red_${self.id}'
+        return f'red_{self.id}'
     
     def __str__(self):
-        return f'${self.text[:20]}...'
+        return f'{self.text[:20]}...'
 
     class Meta:
         ordering = ['stack_exchange_id']
