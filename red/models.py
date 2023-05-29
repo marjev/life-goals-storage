@@ -2,13 +2,13 @@ from django.db import models
 
 
 class CseEndeavour(models.Model):
-    label = models.CharField(max_length=50, unique=True)
+    value = models.CharField(max_length=50, unique=True)
 
     def __str__(self):
-        return self.label
+        return self.value
     
     class Meta:
-        ordering = ['label']
+        ordering = ['value']
 
 
 class ComputerScienceEducatorsPost(models.Model):
@@ -24,7 +24,7 @@ class ComputerScienceEducatorsPost(models.Model):
         default=PostType.QUESTION,
     )
     text = models.TextField()
-    label = models.ForeignKey(CseEndeavour, on_delete=models.CASCADE)
+    label = models.ForeignKey(CseEndeavour, related_name='posts', on_delete=models.CASCADE)
     is_deleted = models.BooleanField(default=False)
 
     @property
